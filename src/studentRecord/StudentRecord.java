@@ -21,6 +21,8 @@ import java.awt.Checkbox;
 import java.awt.SystemColor;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.text.MessageFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -89,6 +91,14 @@ public class StudentRecord {
 		jtxtStudentID = new JTextField();
 		jtxtStudentID.setBackground(new Color(175, 238, 238));
 		jtxtStudentID.setBounds(106, 55, 148, 20);
+		jtxtStudentID.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtStudentID);
 		jtxtStudentID.setColumns(10);
 		
@@ -116,7 +126,7 @@ public class StudentRecord {
 		lblGender.setBounds(22, 213, 74, 14);
 		panel.add(lblGender);
 		
-		JLabel lblDob = new JLabel("Dob:");
+		JLabel lblDob = new JLabel("Date Of Birth:");
 		lblDob.setBounds(22, 244, 74, 14);
 		panel.add(lblDob);
 		
@@ -136,6 +146,14 @@ public class StudentRecord {
 		jtxtExamNo.setBackground(new Color(175, 238, 238));
 		jtxtExamNo.setColumns(10);
 		jtxtExamNo.setBounds(106, 179, 148, 20);
+		jtxtExamNo.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtExamNo);
 		
 		jtxtDob = new JTextField();
@@ -203,48 +221,112 @@ public class StudentRecord {
 		jtxtMaths.setBackground(new Color(175, 238, 238));
 		jtxtMaths.setColumns(10);
 		jtxtMaths.setBounds(446, 55, 148, 20);
+		jtxtMaths.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtMaths);
 		
 		jtxtEng = new JTextField();
 		jtxtEng.setBackground(new Color(175, 238, 238));
 		jtxtEng.setColumns(10);
 		jtxtEng.setBounds(446, 86, 148, 20);
+		jtxtEng.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtEng);
 		
 		jtxtBio = new JTextField();
 		jtxtBio.setBackground(new Color(175, 238, 238));
 		jtxtBio.setColumns(10);
 		jtxtBio.setBounds(446, 117, 148, 20);
+		jtxtBio.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtBio);
 		
 		jtxtCom = new JTextField();
 		jtxtCom.setBackground(new Color(175, 238, 238));
 		jtxtCom.setColumns(10);
 		jtxtCom.setBounds(446, 148, 148, 20);
+		jtxtCom.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtCom);
 		
 		jtxtChem = new JTextField();
 		jtxtChem.setBackground(new Color(175, 238, 238));
 		jtxtChem.setColumns(10);
 		jtxtChem.setBounds(446, 179, 148, 20);
+		jtxtChem.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtChem);
 		
 		jtxtPhy = new JTextField();
 		jtxtPhy.setBackground(new Color(175, 238, 238));
 		jtxtPhy.setColumns(10);
 		jtxtPhy.setBounds(446, 210, 148, 20);
+		jtxtPhy.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtPhy);
 		
 		jtxtAddM = new JTextField();
 		jtxtAddM.setBackground(new Color(175, 238, 238));
 		jtxtAddM.setColumns(10);
 		jtxtAddM.setBounds(446, 241, 148, 20);
+		jtxtAddM.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtAddM);
 		
 		jtxtBus = new JTextField();
 		jtxtBus.setBackground(new Color(175, 238, 238));
 		jtxtBus.setColumns(10);
 		jtxtBus.setBounds(446, 274, 148, 20);
+		jtxtBus.addKeyListener(new KeyAdapter() {
+	         public void keyTyped(KeyEvent ke) {
+		            if(!Character.isDigit(ke.getKeyChar())) {
+		            	ke.consume();
+		            }
+		            
+		          }
+		       });
 		panel.add(jtxtBus);
 		
 		jtxtTotalScore = new JTextField();
@@ -322,6 +404,7 @@ public class StudentRecord {
 		panel_1.setLayout(null);
 		
 		JTextArea jtxtTranscript = new JTextArea();
+		jtxtTranscript.setEditable(false);
 		jtxtTranscript.setFont(new Font("Monospaced", Font.PLAIN, 18));
 		jtxtTranscript.setBackground(new Color(175, 238, 238));
 		jtxtTranscript.setBounds(33, 25, 607, 518);
