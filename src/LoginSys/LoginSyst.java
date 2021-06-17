@@ -1,4 +1,5 @@
 package LoginSys;
+import studentRecord.StudentRecord;
 
 import java.awt.EventQueue;
 
@@ -85,34 +86,25 @@ public class LoginSyst {
 		
 		btnLogin = new JButton("Login");
 		btnLogin.setBackground(new Color(192, 192, 192));
+		btnLogin.setBounds(107, 204, 89, 23);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				String user = txtTeacher.getText();
 				String password = txtPassword.getText();
-				String teacher = txtTeacher.getText();
 				
-				if(password.contains("School") && teacher.contains("ADMIN")) {
-					txtPassword.setText(null);
-					txtTeacher.setText(null);
-					
-				}
-				else
-				{
+				if(user.equals("Admin") && password.equals("12345")) {
+					StudentRecord.main(null);
+				}else{
 					JOptionPane.showMessageDialog(null,"Invalid login Details","login Error",JOptionPane.ERROR_MESSAGE);
-					txtPassword.setText(null);
-					txtTeacher.setText(null);
-					
 				}
-				
-			}
-		});
-		btnLogin.setBounds(107, 204, 89, 23);
+		}});
 		frame.getContentPane().add(btnLogin);
 		
 		btnNewButton_1 = new JButton("Exit");
 		btnNewButton_1.setBackground(new Color(192, 192, 192));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		btnNewButton_1.setBounds(321, 204, 89, 23);
@@ -136,15 +128,8 @@ public class LoginSyst {
 		separator_3.setBounds(473, 41, 1, 146);
 		frame.getContentPane().add(separator_3);
 		
-		btnNewButton = new JButton("Reset");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				txtTeacher.setText(null);
-				txtPassword.setText(null);
-			}
-		});
-		btnNewButton.setBounds(213, 204, 89, 23);
-		frame.getContentPane().add(btnNewButton);
+		
 	}
+
+	
 }
