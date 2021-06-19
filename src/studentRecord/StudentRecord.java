@@ -1,5 +1,6 @@
 package studentRecord;
 import java.awt.EventQueue;
+import LoginSys.LoginSyst;
 
 import javax.swing.JFrame;
 import java.awt.Color;
@@ -23,6 +24,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
 import java.text.MessageFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -78,7 +80,7 @@ public class StudentRecord {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(233, 150, 122));
 		frame.setBounds(0, 0, 2530, 700);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
@@ -592,9 +594,10 @@ public class StudentRecord {
 		btnNewButton_4.setBounds(586, 11, 65, 23);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame = new JFrame("Exit");
+				//frame = new JFrame("Exit");
 				if(JOptionPane.showConfirmDialog(frame,"Confrm if you want to exit","Student Record System",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
-					System.exit(0);
+					LoginSyst.main(null);
+					frame.dispose();
 				}
 				
 			}

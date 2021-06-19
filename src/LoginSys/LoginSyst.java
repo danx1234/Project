@@ -58,7 +58,7 @@ public class LoginSyst {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(0, 191, 255));
 		frame.setBounds(200, 200, 500, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("ADMIN");
@@ -94,6 +94,7 @@ public class LoginSyst {
 				
 				if(user.equals("Admin") && password.equals("12345")) {
 					StudentRecord.main(null);
+					frame.dispose();
 				}else{
 					JOptionPane.showMessageDialog(null,"Invalid login Details","login Error",JOptionPane.ERROR_MESSAGE);
 				}
